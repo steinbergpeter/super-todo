@@ -8,7 +8,7 @@
 
 ## Setup & Initialization
 
-- T001: Initialize mono repo structure (client/server/packages/tests)
+- T001: [X] Initialize mono repo structure (client/server/packages/tests)
 - T002: Install dependencies (React, Node.js, Prisma, Tailwindcss, Zod, Tanstack-Query)
 - T003: Set up linting, formatting, and pre-commit hooks
 
