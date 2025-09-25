@@ -1,4 +1,3 @@
-
 # Feature Specification: Web App for Discussions, Comments, and Likes
 
 **Feature Branch**: `001-this-web-app`
@@ -95,6 +94,14 @@ A user signs up, authenticates, and can create a Discussion. Other users can sub
 - **FR-017**: System MUST retain deleted comments (indicator) indefinitely and never auto-remove them unless manually purged by Admin.
 - **FR-018**: System MUST enforce a maximum nesting depth of 5 levels for comments.
 - **FR-019**: System MUST deliver notifications for new comments, likes, or subscriptions via in-app dashboard/alerts only.
+
+### Non-Functional Requirements
+
+- The system MUST provide a responsive UI with a median response time <200ms for all user actions.
+- The system MUST be intuitive, with user flows validated by at least 3 usability test participants achieving >90% task completion without external help.
+- The system MUST be robust, with automated tests covering >95% of code paths and zero known critical bugs at release.
+- The system MUST be scalable to support 10,000 concurrent users without degradation in performance.
+- The system MUST be accessible, meeting WCAG 2.1 AA standards.
 
 ### Key Entities
 
