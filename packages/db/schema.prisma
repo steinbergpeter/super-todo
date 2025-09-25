@@ -1,0 +1,74 @@
+// Prisma schema for Discussions, Comments, Likes, Users
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model User {
+    id            String         @id @default(uuid())
+    email         String         @unique
+    name          String?
+    password      String
+    createdAt     DateTime       @default(now())
+    updatedAt     DateTime       @updatedAt
+    discussions   Discussion[]
+    comments      Comment[]
+    likes         Like[]
+    subscriptions Subscription[]
+}
+
+model Discussion {
+    id            String         @id @default(uuid())
+    title         String
+    content       String
+    createdAt     DateTime       @default(now())
+    updatedAt     DateTime       @updatedAt
+    authorId      String
+    author        User           @relation(fields: [authorId], references: [id])
+    comments      Comment[]
+    likes         Like[]
+    subscriptions Subscription[]
+}
+
+model Comment {
+    id           String     @id @default(uuid())
+    content      String
+    createdAt    DateTime   @default(now())
+    updatedAt    DateTime   @updatedAt
+    authorId     String
+    author       User       @relation(fields: [authorId], references: [id])
+    discussionId String
+    discussion   Discussion @relation(fields: [discussionId], references: [id])
+    parentId     String?
+    parent       Comment?   @relation("CommentParent", fields: [parentId], references: [id])
+    children     Comment[]  @relation("CommentParent")
+    likes        Like[]
+}
+
+model Like {
+    id           String      @id @default(uuid())
+    userId       String
+    user         User        @relation(fields: [userId], references: [id])
+    discussionId String?
+    discussion   Discussion? @relation(fields: [discussionId], references: [id])
+    commentId    String?
+    comment      Comment?    @relation(fields: [commentId], references: [id])
+    createdAt    DateTime    @default(now())
+}
+
+model Subscription {
+    id           String   @id @default(uuid())
+    userId       String
+    discussionId String
+    createdAt    DateTime @default(now())
+
+    user       User       @relation(fields: [userId], references: [id])
+    discussion Discussion @relation(fields: [discussionId], references: [id])
+
+    @@unique([userId, discussionId])
+}

@@ -8,7 +8,7 @@
 
 ## Setup & Initialization
 
-- T001: [X] Initialize mono repo structure (client/server/packages/tests)
+- T001: [X] Initialize mono repo structure (apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*)
 - T002: Install dependencies (React, Node.js, Prisma, Tailwindcss, Zod, Tanstack-Query)
 - T003: Set up linting, formatting, and pre-commit hooks
 
@@ -16,8 +16,8 @@
 
 ## Data Model & Contracts
 
-- T004 [P]: Create PostgreSQL schema and Prisma models for Discussions, Comments, Likes, Users
-- T005 [P]: Generate initial migration and apply to dev database
+- T004 [P]: Create PostgreSQL schema and Prisma models for Discussions, Comments, Likes, Users, and Subscription entity
+- T005 [P]: Generate initial migration and apply to dev database (including Subscription entity)
 - T006 [P]: Define Zod validation schemas for all entities
 - T007 [P]: Create API contract files for all endpoints (REST/GraphQL)
 

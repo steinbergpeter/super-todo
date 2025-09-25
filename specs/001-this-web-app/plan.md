@@ -25,15 +25,24 @@
 
 ## Summary
 
-This feature enables users to sign up, create Discussions, subscribe, comment (including nested comments), and like comments. Admins can moderate comments with cascade/non-cascade delete. All user actions are optimistic. Data is stored in PostgreSQL. Notifications are delivered in-app only. The project uses a mono repo approach with separate client (React/TypeScript) and server (Node/TypeScript) apps, sharing services where appropriate. Styling is Tailwindcss. ORM is Prisma. Runtime validation is Zod. Server-state is Tanstack-Query.
+This feature enables users to sign up, create Discussions, subscribe (tracked via a Subscription entity), comment (including nested comments), and like comments. Admins can moderate comments with cascade/non-cascade delete. All user actions are optimistic. Data is stored in PostgreSQL using Prisma ORM, with a shared schema and generated client. Notifications are delivered in-app only. The project uses a mono repo approach with separate client (React/TypeScript) and server (Node/TypeScript) apps, sharing services where appropriate. Styling is Tailwindcss. Runtime validation is Zod. Server-state is Tanstack-Query. The folder structure was revised to support shared packages and best practices for maintainability and extensibility.
 
 ## Technical Context
 
-**Performance Goals**: Responsive UI (<200ms p95), scalable to 10k concurrent users  
+**Performance Goals**: Responsive UI (<200ms p95), scalable to 10k concurrent users
 
-**Constraints**: Must comply with constitutional principles (accessibility, reliability, security, privacy, maintainability, testability)  
+**Constraints**: Must comply with constitutional principles (accessibility, reliability, security, privacy, maintainability, testability)
 
-**Scale/Scope**: Initial launch for up to 10k users, extensible for future growth
+**Data Model**: Prisma schema includes User, Discussion, Comment, Like, and Subscription entities. Subscription is a first-class model to track user subscriptions to discussions.
+
+
+### Setup Steps
+
+- Revised folder structure for mono repo: apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*
+- Installed Prisma CLI in server app, generated Prisma client from shared schema
+- Added Subscription entity to schema and updated relations
+- Installed Prisma CLI in server app, generated Prisma client from shared schema
+- Added Subscription entity to schema and updated relations
 
 ## Constitution Check
 

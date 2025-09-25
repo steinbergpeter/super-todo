@@ -35,11 +35,31 @@
 ---
 
 ## User Scenarios & Testing
-
+Users can subscribe to Discussions, tracked via a Subscription entity in the database. Subscriptions allow users to receive in-app notifications and access a personalized dashboard of their discussions. The Subscription model supports extensibility and aligns with project governance for maintainability and testability.
 ## Clarifications
+### Technical Decisions (2025-09-25)
+  
+Users can subscribe to Discussions, tracked via a Subscription entity in the database. Subscriptions allow users to receive in-app notifications and access a personalized dashboard of their discussions. The Subscription model supports extensibility and aligns with project governance for maintainability and testability.
+- Folder structure revised for mono repo: apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*
+- Prisma ORM selected for database management; schema and client generated in shared package
+- Subscription added as a first-class entity in the schema
+### Session 2025-09-25
+  
+### Technical Decisions (2025-09-25)
+
+### Technical Decisions (2025-09-25)
+
+- Folder structure revised for mono repo: apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*
+- Prisma ORM selected for database management; schema and client generated in shared package
+- Subscription added as a first-class entity in the schema
 
 ### Session 2025-09-25
 
+	- Folder structure revised for mono repo: apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*
+	- Prisma ORM selected for database management; schema and client generated in shared package
+	- Subscription added as a first-class entity in the schema
+  
+### Session 2025-09-25
 - Q: What authentication method should be used for user sign-up and login? → A: Both email/password and OAuth
 - Q: How long should deleted comments (indicator) be retained before permanent removal? → A: Indefinitely (never auto-remove)
 - Q: What is the maximum allowed nesting depth for comments? → A: 5 levels
@@ -56,7 +76,7 @@ A user signs up, authenticates, and can create a Discussion. Other users can sub
 3. **Given** a Comment, **When** the Admin deletes it, **Then** it is either replaced with a deletion indicator or removed with all its children, as chosen.
 4. **Given** a Comment, **When** a non-Admin user deletes their own comment, **Then** only that comment is deleted.
 5. **Given** a Comment, **When** a user likes or unlikes it, **Then** the like status is updated.
-6. **Given** a user signs in, **When** they view their dashboard, **Then** they see all Discussions they are subscribed to.
+6. **Given** a user signs in, **When** they view their dashboard, **Then** they see all Discussions they are subscribed to (tracked via Subscription entity).
 
 ### Edge Cases
 
@@ -115,30 +135,21 @@ A user signs up, authenticates, and can create a Discussion. Other users can sub
 
 ## Review & Acceptance Checklist
 
-### Gate
 
-Automated checks run during main() execution
+Users can subscribe to Discussions, tracked via a Subscription entity in the database. Subscriptions allow users to receive in-app notifications and access a personalized dashboard of their discussions. The Subscription model supports extensibility and aligns with project governance for maintainability and testability.
 
-### Content Quality
+### Technical Decisions (2025-09-25)
 
-- [ ] No implementation details (languages, frameworks, APIs)
-- [ ] Focused on user value and business needs
-- [ ] Written for non-technical stakeholders
-- [ ] All mandatory sections completed
+- Folder structure revised for mono repo: apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*
+- Prisma ORM selected for database management; schema and client generated in shared package
+- Subscription added as a first-class entity in the schema
 
-### Requirement Completeness
+### Session 2025-09-25
 
-- [ ] No [NEEDS CLARIFICATION] markers remain
-- [ ] Requirements are testable and unambiguous  
-- [ ] Success criteria are measurable
-- [ ] Scope is clearly bounded
-- [ ] Dependencies and assumptions identified
-
----
-
-## Execution Status
-
-### Status
+- Q: What authentication method should be used for user sign-up and login? → A: Both email/password and OAuth
+- Q: How long should deleted comments (indicator) be retained before permanent removal? → A: Indefinitely (never auto-remove)
+- Q: What is the maximum allowed nesting depth for comments? → A: 5 levels
+- Q: How should notifications for new comments, likes, or subscriptions be delivered to users? → A: In-app only (dashboard/alerts)
 
 Updated by main() during processing
 
