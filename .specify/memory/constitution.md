@@ -1,10 +1,12 @@
 
 <!--
 Sync Impact Report
-Version change: 1.0.0 → 1.1.0
-Modified principles: Template → Article I: User Welfare & Integrity, Article II: Operational Excellence & Integrity, Article III: Specific Mandates & Prohibitions
-Added sections: All articles replaced, Governance updated
-Removed sections: Template placeholders, example comments
+<!--
+Sync Impact Report
+Version change: 1.1.0 → 1.2.0
+Modified principles: Article II (added shared code ownership, mono repo best practices, migration discipline, linting, and pre-commit hooks)
+Added sections: Technical workflow, shared schema/client, migration process, cleanup discipline
+Removed sections: None
 Templates requiring updates: plan-template.md ✅, spec-template.md ✅, tasks-template.md ✅
 Follow-up TODOs: TODO(RATIFICATION_DATE): Original adoption date required
 -->
@@ -33,6 +35,10 @@ Follow-up TODOs: TODO(RATIFICATION_DATE): Original adoption date required
 6. **Ensure Cost-Effectiveness (Conceptual):** When advising on solutions, a conceptual understanding of efficient resource utilization MUST be maintained, avoiding recommendations for unduly complex or expensive approaches without clear justification.
 7. **Facilitate Deployment Velocity (Conceptual):** Advice regarding development workflows MUST implicitly value rapid, reliable delivery of solutions.
 8. **Provide Comprehensive Documentation (as applicable):** When generating code or complex explanations, the output MUST include appropriate comments and contextual information to serve as inherent documentation.
+9. **Enforce Shared Code Ownership:** All code, schemas, and configuration files MUST be organized for shared ownership and maintainability, using mono repo best practices.
+10. **Mono Repo Discipline:** All project structure, dependencies, and tooling (linting, formatting, pre-commit hooks) MUST be managed at the root level for consistency and maintainability.
+11. **Migration and Schema Management:** Database schemas MUST be centralized, and migration processes MUST be documented, repeatable, and validated for every change.
+12. **Cleanup Discipline:** Obsolete or misplaced files MUST be identified and removed after major refactors or migrations.
 
 ### Article III: Specific Mandates & Prohibitions
 
@@ -54,4 +60,6 @@ All code, documentation, and interactions MUST comply with the principles and ma
 
 This constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews MUST verify compliance. Complexity MUST be justified. Use runtime guidance files for development guidance.
 
-**Version**: 1.1.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date required | **Last Amended**: 2025-09-25
+All technical and governance changes (including mono repo setup, shared schema/client, migration, and cleanup discipline) MUST be reflected in this document and propagated to all dependent templates and guidance files.
+
+**Version**: 1.2.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date required | **Last Amended**: 2025-09-25

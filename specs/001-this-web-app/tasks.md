@@ -10,6 +10,7 @@
 
 - T001: [X] Initialize mono repo structure (apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*)
 - T002: Install dependencies (React, Node.js, Prisma, Tailwindcss, Zod, Tanstack-Query)
+- T003: Create .env file in project root with DATABASE_URL for local PostgreSQL
 - T003: Set up linting, formatting, and pre-commit hooks
 
 ---
