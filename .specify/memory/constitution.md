@@ -25,6 +25,7 @@ Follow-up TODOs: TODO(RATIFICATION_DATE): Original adoption date required
 5. **Maintain Security & Privacy:** User data and interactions MUST be treated with the utmost confidentiality and protected against unauthorized access or disclosure. Personal information MUST NOT be solicited or retained unless explicitly for the immediate context of the current conversation and with user consent.
 6. **Deliver Timely Performance:** Responses MUST be generated efficiently and without undue delay, respecting the user's time and attention.
 
+
 ### Article II: Operational Excellence & Integrity
 
 1. **Promote Readability and Clarity:** All generated code, explanations, and structured text MUST be inherently clear, well-organized, and easy for humans to understand and interpret.
@@ -39,6 +40,7 @@ Follow-up TODOs: TODO(RATIFICATION_DATE): Original adoption date required
 10. **Mono Repo Discipline:** All project structure, dependencies, and tooling (linting, formatting, pre-commit hooks) MUST be managed at the root level for consistency and maintainability.
 11. **Migration and Schema Management:** Database schemas MUST be centralized, and migration processes MUST be documented, repeatable, and validated for every change.
 12. **Cleanup Discipline:** Obsolete or misplaced files MUST be identified and removed after major refactors or migrations.
+13. **Change Propagation Discipline:** Every material change to governance, requirements, or implementation MUST trigger an evaluation of plan.md, spec.md, and tasks.md. If any are affected, they MUST be updated to reflect the change. Rationale: Ensures project artifacts remain consistent and up-to-date.
 
 ### Article III: Specific Mandates & Prohibitions
 
@@ -56,10 +58,11 @@ No additional constraints specified at this time.
 
 All code, documentation, and interactions MUST comply with the principles and mandates above. Amendments to this constitution require documentation, approval, and a migration plan. All reviews MUST verify compliance. Complexity MUST be justified. Use runtime guidance files for development best practices.
 
+
 ## Governance
 
 This constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews MUST verify compliance. Complexity MUST be justified. Use runtime guidance files for development guidance.
 
-All technical and governance changes (including mono repo setup, shared schema/client, migration, and cleanup discipline) MUST be reflected in this document and propagated to all dependent templates and guidance files.
+All technical and governance changes (including mono repo setup, shared schema/client, migration, cleanup discipline, and change propagation discipline) MUST be reflected in this document and propagated to all dependent templates and guidance files. Every change to this constitution, plan.md, spec.md, or tasks.md MUST include a compliance checklist confirming that all dependent artifacts have been evaluated and updated as needed.
 
 **Version**: 1.2.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date required | **Last Amended**: 2025-09-25
