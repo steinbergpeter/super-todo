@@ -35,9 +35,11 @@
 ---
 
 ## User Scenarios & Testing (updated)
+
 Users can subscribe to Discussions, tracked via a Subscription entity in the database. Subscriptions allow users to receive in-app notifications and access a personalized dashboard of their discussions. The Subscription model supports extensibility and aligns with project governance for maintainability and testability.
 
 Setup, data model, and contract phases are complete:
+
 - Mono repo structure established
 - Dependencies installed
 - Linting/hooks configured
@@ -45,7 +47,9 @@ Setup, data model, and contract phases are complete:
 - Centralized schema and models (including Subscription)
 - Migration validated
 - Zod schemas and API contracts created
+
 ## Clarifications
+
 ### Technical Decisions (2025-09-25, updated)
 
 - Mono repo structure revised and established
@@ -53,9 +57,6 @@ Setup, data model, and contract phases are complete:
 - Subscription added as a first-class entity in the schema
 - Zod schemas and API contracts created for all entities
 - Migration validated
-### Session 2025-09-25
-  
-### Technical Decisions (2025-09-25)
 
 ### Technical Decisions (2025-09-25)
 
@@ -65,11 +66,6 @@ Setup, data model, and contract phases are complete:
 
 ### Session 2025-09-25
 
-	- Folder structure revised for mono repo: apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*
-	- Prisma ORM selected for database management; schema and client generated in shared package
-	- Subscription added as a first-class entity in the schema
-  
-### Session 2025-09-25
 - Q: What authentication method should be used for user sign-up and login? → A: Both email/password and OAuth
 - Q: How long should deleted comments (indicator) be retained before permanent removal? → A: Indefinitely (never auto-remove)
 - Q: What is the maximum allowed nesting depth for comments? → A: 5 levels
@@ -143,25 +139,8 @@ A user signs up, authenticates, and can create a Discussion. Other users can sub
 
 ---
 
+
 ## Review & Acceptance Checklist
-
-
-Users can subscribe to Discussions, tracked via a Subscription entity in the database. Subscriptions allow users to receive in-app notifications and access a personalized dashboard of their discussions. The Subscription model supports extensibility and aligns with project governance for maintainability and testability.
-
-### Technical Decisions (2025-09-25)
-
-- Folder structure revised for mono repo: apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*
-- Prisma ORM selected for database management; schema and client generated in shared package
-- Subscription added as a first-class entity in the schema
-
-### Session 2025-09-25
-
-- Q: What authentication method should be used for user sign-up and login? → A: Both email/password and OAuth
-- Q: How long should deleted comments (indicator) be retained before permanent removal? → A: Indefinitely (never auto-remove)
-- Q: What is the maximum allowed nesting depth for comments? → A: 5 levels
-- Q: How should notifications for new comments, likes, or subscriptions be delivered to users? → A: In-app only (dashboard/alerts)
-
-Updated by main() during processing
 
 - [ ] User description parsed
 - [ ] Key concepts extracted
@@ -170,5 +149,3 @@ Updated by main() during processing
 - [ ] Requirements generated
 - [ ] Entities identified
 - [ ] Review checklist passed
-
----

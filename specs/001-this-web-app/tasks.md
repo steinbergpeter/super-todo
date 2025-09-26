@@ -6,7 +6,6 @@
 
 ---
 
-
 ## Setup & Initialization (completed)
 
 - T001: [X] Initialize mono repo structure (apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*) at root for shared code ownership
@@ -16,7 +15,6 @@
 
 ---
 
-
 ## Data Model & Contracts (completed)
 
 - T005 [X] [P]: Centralize PostgreSQL schema and Prisma models in packages/db for Discussions, Comments, Likes, Users, and Subscription entity
@@ -25,7 +23,6 @@
 - T008 [X] [P]: Create API contract files for all endpoints (REST/GraphQL)
 
 ---
-
 
 ## Core Implementation (next phase)
 

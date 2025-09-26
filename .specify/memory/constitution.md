@@ -41,6 +41,7 @@ Follow-up TODOs: TODO(RATIFICATION_DATE): Original adoption date required
 11. **Migration and Schema Management:** Database schemas MUST be centralized, and migration processes MUST be documented, repeatable, and validated for every change.
 12. **Cleanup Discipline:** Obsolete or misplaced files MUST be identified and removed after major refactors or migrations.
 13. **Change Propagation Discipline:** Every material change to governance, requirements, or implementation MUST trigger an evaluation of plan.md, spec.md, and tasks.md. If any are affected, they MUST be updated to reflect the change. Rationale: Ensures project artifacts remain consistent and up-to-date.
+14. **Strict Markdown Linting Compliance:** All Markdown documents (including constitution, plan, spec, tasks, and guidance files) MUST be generated and maintained according to strict Markdown linting rules. Rationale: Guarantees readability, accessibility, and consistency across all project documentation.
 
 ### Article III: Specific Mandates & Prohibitions
 
@@ -63,6 +64,6 @@ All code, documentation, and interactions MUST comply with the principles and ma
 
 This constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews MUST verify compliance. Complexity MUST be justified. Use runtime guidance files for development guidance.
 
-All technical and governance changes (including mono repo setup, shared schema/client, migration, cleanup discipline, and change propagation discipline) MUST be reflected in this document and propagated to all dependent templates and guidance files. Every change to this constitution, plan.md, spec.md, or tasks.md MUST include a compliance checklist confirming that all dependent artifacts have been evaluated and updated as needed.
+All technical and governance changes (including mono repo setup, shared schema/client, migration, cleanup discipline, change propagation discipline, and strict Markdown linting compliance) MUST be reflected in this document and propagated to all dependent templates and guidance files. Every change to this constitution, plan.md, spec.md, or tasks.md MUST include a compliance checklist confirming that all dependent artifacts have been evaluated and updated as needed, and that all Markdown files conform to linting rules.
 
 **Version**: 1.2.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date required | **Last Amended**: 2025-09-25
