@@ -33,9 +33,9 @@
 - 👥 Written for business stakeholders, not developers
 
 ### Section Requirements
-- **Mandatory sections**: Must be completed for every feature
-- **Optional sections**: Include only when relevant to the feature
-- When a section doesn't apply, remove it entirely (don't leave as "N/A")
+**Mandatory sections**: Must be completed for every feature and reflect current constitution mandates (mono repo discipline, shared code ownership, migration/schema management, cleanup discipline).
+**Optional sections**: Include only when relevant to the feature
+When a section doesn't apply, remove it entirely (don't leave as "N/A")
 
 ### For AI Generation
 When creating this spec from a user prompt:

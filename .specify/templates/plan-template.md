@@ -47,7 +47,11 @@
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Gates determined by the current constitution:
+- Mono repo discipline: All code, schemas, and configuration files MUST be organized for shared ownership and maintainability at the root level.
+- Shared code ownership: All contributors MUST follow shared ownership and maintainability practices.
+- Migration/schema management: Database schemas MUST be centralized, and migration processes MUST be documented, repeatable, and validated for every change.
+- Cleanup discipline: Obsolete or misplaced files MUST be identified and removed after major refactors or migrations.
 
 ## Project Structure
 

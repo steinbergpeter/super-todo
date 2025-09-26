@@ -43,9 +43,9 @@
 - Paths shown below assume single project - adjust based on plan.md structure
 
 ## Phase 3.1: Setup
-- [ ] T001 Create project structure per implementation plan
+- [ ] T001 Create mono repo structure per implementation plan (root-level organization, shared code ownership)
 - [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T003 [P] Configure linting, formatting, and pre-commit hooks at root
 
 ## Phase 3.2: Tests First (TDD) ⚠️ MUST COMPLETE BEFORE 3.3
 **CRITICAL: These tests MUST be written and MUST FAIL before ANY implementation**
@@ -58,6 +58,8 @@
 - [ ] T008 [P] User model in src/models/user.py
 - [ ] T009 [P] UserService CRUD in src/services/user_service.py
 - [ ] T010 [P] CLI --create-user in src/cli/user_commands.py
+- [ ] T011 [P] Centralize and validate database schema and migrations
+- [ ] T012 [P] Remove obsolete or misplaced files after refactor/migration
 - [ ] T011 POST /api/users endpoint
 - [ ] T012 GET /api/users/{id} endpoint
 - [ ] T013 Input validation
