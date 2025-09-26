@@ -8,30 +8,30 @@
 
 ## Setup & Initialization
 
-- T001: [X] Initialize mono repo structure (apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*)
-- T002: Install dependencies (React, Node.js, Prisma, Tailwindcss, Zod, Tanstack-Query)
-- T003: Create .env file in project root with DATABASE_URL for local PostgreSQL
-- T003: Set up linting, formatting, and pre-commit hooks
+- T001: [X] Initialize mono repo structure (apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*) at root for shared code ownership
+- T002: [X] Install dependencies (React, Node.js, Prisma, Tailwindcss, Zod, Tanstack-Query) at root
+- T003: [X] Create .env file in project root with DATABASE_URL for local PostgreSQL
+- T004: [X] Set up linting, formatting, and pre-commit hooks at root
 
 ---
 
 ## Data Model & Contracts
 
-- T004 [P]: Create PostgreSQL schema and Prisma models for Discussions, Comments, Likes, Users, and Subscription entity
-- T005 [P]: Generate initial migration and apply to dev database (including Subscription entity)
-- T006 [P]: Define Zod validation schemas for all entities
-- T007 [P]: Create API contract files for all endpoints (REST/GraphQL)
+- T005 [X] [P]: Centralize PostgreSQL schema and Prisma models in packages/db for Discussions, Comments, Likes, Users, and Subscription entity
+- T006 [X] [P]: Generate initial migration and apply to dev database (including Subscription entity); validate migration repeatability
+- T007 [P]: Define Zod validation schemas for all entities
+- T008 [P]: Create API contract files for all endpoints (REST/GraphQL)
 
 ---
 
 ## Core Implementation
 
-- T008: Implement authentication (sign up, login, session management)
-- T009: Implement Discussions CRUD endpoints and service logic
-- T010: Implement Comments CRUD endpoints, including nested comments
-- T011: Implement Likes endpoints and logic
-- T012: Implement subscription and notification logic (in-app only)
-- T013: Implement admin moderation (cascade/non-cascade delete)
+- T009: Implement authentication (sign up, login, session management)
+- T010: Implement Discussions CRUD endpoints and service logic
+- T011: Implement Comments CRUD endpoints, including nested comments
+- T012: Implement Likes endpoints and logic
+- T013: Implement subscription and notification logic (in-app only)
+- T014: Implement admin moderation (cascade/non-cascade delete)
 
 ---
 
@@ -67,6 +67,7 @@
 - T031 [P]: Performance validation (UI <200ms p95, 10k users)
 - T032 [P]: Final accessibility audit (WCAG 2.1 AA)
 - T033 [P]: Final code review and refactor
+- T034 [P]: Remove obsolete or misplaced files after refactor/migration (cleanup discipline)
 
 ---
 
