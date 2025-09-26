@@ -6,7 +6,8 @@
 
 ---
 
-## Setup & Initialization
+
+## Setup & Initialization (completed)
 
 - T001: [X] Initialize mono repo structure (apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*) at root for shared code ownership
 - T002: [X] Install dependencies (React, Node.js, Prisma, Tailwindcss, Zod, Tanstack-Query) at root
@@ -15,16 +16,18 @@
 
 ---
 
-## Data Model & Contracts
+
+## Data Model & Contracts (completed)
 
 - T005 [X] [P]: Centralize PostgreSQL schema and Prisma models in packages/db for Discussions, Comments, Likes, Users, and Subscription entity
 - T006 [X] [P]: Generate initial migration and apply to dev database (including Subscription entity); validate migration repeatability
-- T007 [P]: Define Zod validation schemas for all entities
-- T008 [P]: Create API contract files for all endpoints (REST/GraphQL)
+- T007 [X] [P]: Define Zod validation schemas for all entities
+- T008 [X] [P]: Create API contract files for all endpoints (REST/GraphQL)
 
 ---
 
-## Core Implementation
+
+## Core Implementation (next phase)
 
 - T009: Implement authentication (sign up, login, session management)
 - T010: Implement Discussions CRUD endpoints and service logic

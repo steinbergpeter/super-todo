@@ -4,18 +4,17 @@
 
 **Input**: Feature specification from `/specs/001-this-web-app/spec.md`
 
-## Execution Flow (/plan command scope)
+
+## Execution Flow (updated)
 
 ```text
-1. Load feature spec from Input path
-2. Fill Technical Context (scan for NEEDS CLARIFICATION)
-3. Fill the Constitution Check section based on the content of the constitution document.
-4. Evaluate Constitution Check section below
-5. Execute Phase 0 → research.md
-6. Execute Phase 1 → contracts, data-model.md, quickstart.md, .github/copilot-instructions.md
-7. Re-evaluate Constitution Check section
-8. Plan Phase 2 → Describe task generation approach (DO NOT create tasks.md)
-9. STOP - Ready for /tasks command
+1. Feature spec loaded and clarified
+2. Technical context and constraints documented
+3. Constitution Check completed and passed
+4. Setup phase completed: mono repo structure, dependencies, linting/hooks, .env
+5. Data model phase completed: centralized schema, Subscription entity added, migration validated
+6. Contract phase completed: Zod schemas and API contract files for all endpoints
+7. Ready for core implementation: authentication, CRUD endpoints, UI scaffolding, and testing
 ```
 
 **IMPORTANT**: The /plan command STOPS at step 7. Phases 2-4 are executed by other commands:
@@ -23,9 +22,21 @@
 - Phase 2: /tasks command creates tasks.md
 - Phase 3-4: Implementation execution (manual or via tools)
 
-## Summary
 
-This feature enables users to sign up, create Discussions, subscribe (tracked via a Subscription entity), comment (including nested comments), and like comments. Admins can moderate comments with cascade/non-cascade delete. All user actions are optimistic. Data is stored in PostgreSQL using Prisma ORM, with a shared schema and generated client. Notifications are delivered in-app only. The project uses a mono repo approach with separate client (React/TypeScript) and server (Node/TypeScript) apps, sharing services where appropriate. Styling is Tailwindcss. Runtime validation is Zod. Server-state is Tanstack-Query. The folder structure was revised to support shared packages and best practices for maintainability and extensibility.
+
+## Summary (updated)
+
+The project setup, data model, and contract phases are complete:
+
+- Mono repo structure established (apps/client, apps/server, packages/db, packages/services, packages/ui, tests/*)
+- Dependencies installed (React, Node.js, Prisma, Tailwindcss, Zod, Tanstack-Query)
+- Linting, formatting, and pre-commit hooks configured at root
+- .env file created for local PostgreSQL
+- Centralized Prisma schema and models in packages/db, including Subscription entity
+- Migration generated and validated
+- Zod validation schemas and API contract files for all endpoints created
+
+Next steps: Implement authentication, CRUD endpoints, UI scaffolding, and automated tests.
 
 ## Technical Context
 
